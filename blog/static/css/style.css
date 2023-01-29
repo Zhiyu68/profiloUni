@@ -1,0 +1,31 @@
+.homepage{
+    margin: 3.125rem auto 0 auto;
+    font-family:'Sacramento',cursive;
+    line-height: 2;
+}
+
+
+.intro-top{
+    text-align: center;
+}
+.me{
+    height: 200px;
+    padding-top: 20px;
+    margin:50px auto;
+}
+hr{
+    border-style: none;
+    border-top-style: dotted;
+    border-color: #EAF6F6;
+    border-width: 6px;
+    width: 4%;
+    margin: 100px auto;
+}
+
+.Contact_Me{
+    text-align: center;
+}
+
+.contact-message{
+    width: 40%;
+    margin: 40px auto 60px;

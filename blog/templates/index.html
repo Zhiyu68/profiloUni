@@ -1,0 +1,85 @@
+{% include "header.html" %}
+
+  <!-- Page Header -->
+
+  <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-pg.png')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1 class="homepage">I'm Zhiyu.</h1>
+            <span class="subheading">a computing student.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+       <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="profile">
+            <div class="intro-top"><img class="me" src="static/img/me-modified.png" alt="">
+            <h2>Hello.</h2></div>
+              <p>Aspiring Front-end developer | MSc Computing at Cardiff University</p>
+          </div>
+       </div>
+    </div>
+  </div>
+        <hr>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {% for post in all_posts %}
+        <div class="post-preview">
+          <a href="{{ url_for('show_post', post_id=post.id) }}">
+            <h2 class="post-title">
+              {{post.title}}
+            </h2>
+            <h3 class="post-subtitle">
+              {{post.subtitle}}
+            </h3>
+          </a>
+          <p class="post-meta">Posted by
+
+<!--            Changed from post.author as post.author is now a User object.-->
+            {{post.author.name}}
+            on {{post.date}}
+<!--          If user id is 1 then they can see the delete button-->
+            {% if current_user.id == 1: %}
+            <a href="{{url_for('delete_post', post_id=post.id) }}">✘</a>
+            {% endif %}
+
+          </p>
+        </div>
+
+        {% endfor %}
+
+
+        <!-- New Post -->
+<!--        f user id is 1 then they can see the Create New Post button-->
+        {% if current_user.id == 1: %}
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="{{url_for('add_new_post')}}">Create New Post</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <hr>
+ <div class="container">
+        <div class="Contact_Me">
+            <h2>Contact Me</h2>
+            <h3>Have questions? I have answers.</h3>
+            <p class="contact-message"> Want to get in touch? <br> Click " EMAIL ME " to send me a message  <br> and I will get back to you as soon as possible!</p>
+            <a class="btn btn-dark" href="mailto:profileproject66@email.com"> Email Me</a>
+
+        </div>
+    </div>
+ </div>
+
+{% include "footer.html" %}
