@@ -201,7 +201,7 @@ def edit_post(post_id):
         title=post.title,
         subtitle=post.subtitle,
         img_url=post.img_url,
-        author=post.author,
+        author=post.author_id,
         body=post.body
     )
     if edit_form.validate_on_submit():
