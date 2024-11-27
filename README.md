@@ -1,3 +1,5 @@
+Language: HTML | CSS | Bootstrap | Python/Flask 
+
 List of advanced functionality I have implemented; 
 
 1.	 Website posts are open for comments from both users and administrators.
