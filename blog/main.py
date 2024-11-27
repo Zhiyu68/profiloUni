@@ -12,12 +12,12 @@ from flask_gravatar import Gravatar
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = '******************'
 ckeditor = CKEditor(app)
 Bootstrap(app)
 
 ##CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://c22004170:BBxl0833562929@csmysql.cs.cf.ac.uk:3306/c22004170_CMT120'
+app.config['SQLALCHEMY_DATABASE_URI'] = '***************************'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
