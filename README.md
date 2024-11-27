@@ -1,5 +1,7 @@
 Language: HTML | CSS | Bootstrap | Python/Flask 
 
+🟢 Screenshoots in "screenshots of all of my website’s pages.pdf"
+
 List of advanced functionality I have implemented; 
 
 1.	 Website posts are open for comments from both users and administrators.
